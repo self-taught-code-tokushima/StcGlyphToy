@@ -62,5 +62,5 @@ private const val FIXED_TEXT = "STC"
 
 ## 参考
 
-- 詳細 API ガイド: `../GlyphMatrix-4aPro-Text-Guide/README.md`
+- 詳細 API ガイド: `GlyphMatrix-4aPro.md`
 - プレビュー画像仕様（512×512 / LED 30px / 円マスク / #1C1C1C）に沿った自作 vector drawable を `res/drawable/toy_preview.xml` に同梱
