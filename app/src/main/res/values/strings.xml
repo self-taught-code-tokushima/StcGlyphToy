@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="toy_name">STC</string>
+    <string name="toy_summary">背面 Glyph Matrix に STC を固定表示します。</string>
+</resources>

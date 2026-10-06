@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Phone (4a) Pro Glyph Toy プレビュー仕様:
+     canvas 512x512 / matrix 440x440 / margin 36 / LED 30px / BG #000000
+     lit #FFFFFF / unlit #1C1C1C / 13x13 grid, 円マスク外(四隅)は描かない
+     格子の中心軸 cx=cy=256, LED中心 = 36 + 30*i + 15 (i=0..12) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="512dp"
+    android:height="512dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+
+    <!-- background -->
+    <path android:pathData="M0,0h512v512h-512z" android:fillColor="#000000"/>
+
+    <!-- unlit cells (inside circle mask) -->
+    <path android:fillColor="#1C1C1C" android:pathData="
+        M198,102h30v30h-30z M228,102h30v30h-30z M258,102h30v30h-30z
+        M168,132h30v30h-30z M198,132h30v30h-30z M228,132h30v30h-30z M258,132h30v30h-30z M288,132h30v30h-30z
+        M138,162h30v30h-30z M168,162h30v30h-30z M198,162h30v30h-30z M228,162h30v30h-30z M258,162h30v30h-30z M288,162h30v30h-30z M318,162h30v30h-30z
+        M108,192h30v30h-30z M138,192h30v30h-30z M168,192h30v30h-30z M198,192h30v30h-30z M228,192h30v30h-30z M258,192h30v30h-30z M288,192h30v30h-30z M318,192h30v30h-30z M348,192h30v30h-30z
+        M108,222h30v30h-30z M138,222h30v30h-30z M168,222h30v30h-30z M198,222h30v30h-30z M228,222h30v30h-30z M258,222h30v30h-30z M288,222h30v30h-30z M318,222h30v30h-30z M348,222h30v30h-30z
+        M96,252h30v30h-30z M126,252h30v30h-30z M156,252h30v30h-30z M186,252h30v30h-30z M216,252h30v30h-30z M246,252h30v30h-30z M276,252h30v30h-30z M306,252h30v30h-30z M336,252h30v30h-30z M366,252h30v30h-30z
+        M108,282h30v30h-30z M138,282h30v30h-30z M168,282h30v30h-30z M198,282h30v30h-30z M228,282h30v30h-30z M258,282h30v30h-30z M288,282h30v30h-30z M318,282h30v30h-30z M348,282h30v30h-30z
+        M108,312h30v30h-30z M138,312h30v30h-30z M168,312h30v30h-30z M198,312h30v30h-30z M228,312h30v30h-30z M258,312h30v30h-30z M288,312h30v30h-30z M318,312h30v30h-30z M348,312h30v30h-30z
+        M138,342h30v30h-30z M168,342h30v30h-30z M198,342h30v30h-30z M228,342h30v30h-30z M258,342h30v30h-30z M288,342h30v30h-30z M318,342h30v30h-30z
+        M168,372h30v30h-30z M198,372h30v30h-30z M228,372h30v30h-30z M258,372h30v30h-30z M288,372h30v30h-30z
+        M198,402h30v30h-30z M228,402h30v30h-30z M258,402h30v30h-30z"/>
+
+    <!-- "STC" lit cells (5px tall pattern, 3x5 each, spacing 1) -->
+    <!-- S (x=4..6, y=4..8) -->
+    <path android:fillColor="#FFFFFF" android:pathData="
+        M168,162h30v30h-30z M198,162h30v30h-30z M228,162h30v30h-30z
+        M168,192h30v30h-30z
+        M168,222h30v30h-30z M198,222h30v30h-30z M228,222h30v30h-30z
+        M228,252h30v30h-30z
+        M168,282h30v30h-30z M198,282h30v30h-30z M228,282h30v30h-30z"/>
+    <!-- T (x=8..10) -->
+    <path android:fillColor="#FFFFFF" android:pathData="
+        M288,162h30v30h-30z M318,162h30v30h-30z M348,162h30v30h-30z
+        M318,192h30v30h-30z
+        M318,222h30v30h-30z
+        M318,252h30v30h-30z
+        M318,282h30v30h-30z"/>
+    <!-- C (x=11..13→ x=11,12 only fits; use x=11..13 clipped: keep x=11,12) -->
+    <path android:fillColor="#FFFFFF" android:pathData="
+        M408,162h30v30h-30z M438,162h30v30h-30z
+        M408,192h30v30h-30z
+        M408,222h30v30h-30z
+        M408,252h30v30h-30z
+        M408,282h30v30h-30z M438,282h30v30h-30z"/>
+</vector>

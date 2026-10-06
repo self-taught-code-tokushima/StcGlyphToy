@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Glyph Matrix 利用に必要な必須権限 -->
+    <uses-permission android:name="com.nothing.ketchum.permission.ENABLE" />
+
+    <application
+        android:allowBackup="false"
+        android:label="STC Glyph"
+        android:icon="@drawable/toy_preview">
+
+        <!-- Nothing API Key（開発中は "test"。Toy 登録に必要） -->
+        <meta-data
+            android:name="NothingKey"
+            android:value="test" />
+
+        <!-- アプリ起動用（Manage Glyph Toys への誘導） -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- STC 固定表示 AOD Glyph Toy -->
+        <service
+            android:name=".StcTextToyService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.nothing.glyph.TOY" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.nothing.glyph.toy.name"
+                android:resource="@string/toy_name" />
+
+            <meta-data
+                android:name="com.nothing.glyph.toy.image"
+                android:resource="@drawable/toy_preview" />
+
+            <meta-data
+                android:name="com.nothing.glyph.toy.summary"
+                android:resource="@string/toy_summary" />
+
+            <!-- Phone (4a) Pro は AOD 専用 Toy のみ対応 → 必須 -->
+            <meta-data
+                android:name="com.nothing.glyph.toy.aod_support"
+                android:value="1" />
+        </service>
+
+    </application>
+</manifest>

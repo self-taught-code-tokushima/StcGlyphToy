@@ -1,0 +1,21 @@
+# Gradle
+.gradle/
+build/
+app/build/
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+captures/
+.cxx/
+local.properties
+
+# Kotlin
+.kotlin/
+
+# Keystore（実運用の鍵を置く可能性に備えて）
+*.jks
+*.keystore
+
+# OS
+.DS_Store
